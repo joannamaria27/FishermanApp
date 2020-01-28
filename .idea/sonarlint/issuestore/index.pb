@@ -1,0 +1,19 @@
+
+l
+<app/src/main/java/com/example/fishermanapp/MainActivity.java,d\5\d5b3e9d5dc86e3d622f01f01cdf92695f193b015
+@
+app/build.gradle,f\4\f4a01d6a4fcb971362ec00a83903fd3902f52164
+d
+4app/src/main/java/com/example/fishermanapp/Fish.java,f\0\f0c13d821698c8ece83aa7271e5d282856fc439a
+g
+7app/src/main/java/com/example/fishermanapp/FishDao.java,f\6\f6312557768177d0b77459be33abcf72149b5421
+l
+<app/src/main/java/com/example/fishermanapp/FishDatabase.java,2\d\2df414ad94424eedf77b79de0c5773c96cdba612
+n
+>app/src/main/java/com/example/fishermanapp/FishRepository.java,a\6\a60bc9e2cfabe0ef76a9b8a34a89c8d15cd22859
+m
+=app/src/main/java/com/example/fishermanapp/FishViewModel.java,f\7\f70af936147cab6f5fae8c9c13ed7d1534dc3d6d
+p
+@app/src/main/java/com/example/fishermanapp/EditFishActivity.java,4\f\4f383265420f41287d37da1ca8280886825a3507
+P
+ app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e

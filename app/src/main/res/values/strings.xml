@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">FishermanApp</string>
+    <string name="action_settings">Settings</string>
+
+    //18
+
+    <string name="hint_fish_nazwa">Nazwa...</string>
+    <string name="hint_fish_data">Data...</string>
+    <string name="hint_fish_wielkosc">Wielkosc...</string>
+    <string name="hint_fish_waga">Waga...</string>
+    <string name="hint_fish_jezioro">Jezioro...</string>
+
+    <string name="button_save">Save</string>
+    <string name="empty_not_save">Fish not saved because there are empty fields.</string>
+
+    <string name="fish_added">Add fish</string>
+    <string name="fish_updated">Update fish</string>
+
+</resources>
