@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,29 +31,29 @@ public class MainActivity extends AppCompatActivity {
     private FishViewModel fishViewModel;
     //r
     private Fish selectedFish;
+    Button buttonCamera;
 
 
     //22
-    public static final int NEW_FISH_ACTIVITY_REQUEST_CODE=1;
+    public static final int NEW_FISH_ACTIVITY_REQUEST_CODE = 1;
+    public static final int NEW_CAMERA_ACTIVITY_REQUEST_CODE = 1;
     //r
     public static final int EDIT_FISH_ACTIVITY_REQUEST_CODE = 2;
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data)
-    {
-        super.onActivityResult(requestCode,resultCode,data);
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
 
-        if(requestCode==NEW_FISH_ACTIVITY_REQUEST_CODE && resultCode == RESULT_OK)
-        {
-            Fish fish = new Fish (data.getStringExtra(EditFishActivity.EXTRA_EDIT_FISH_NAZWA),
+        if (requestCode == NEW_FISH_ACTIVITY_REQUEST_CODE && resultCode == RESULT_OK) {
+            Fish fish = new Fish(data.getStringExtra(EditFishActivity.EXTRA_EDIT_FISH_NAZWA),
                     data.getStringExtra(EditFishActivity.EXTRA_EDIT_FISH_DATA),
                     data.getStringExtra(EditFishActivity.EXTRA_EDIT_FISH_WIELKOSC),
                     data.getStringExtra(EditFishActivity.EXTRA_EDIT_FISH_WAGA),
                     data.getStringExtra(EditFishActivity.EXTRA_EDIT_FISH_JEZIORO));
             fishViewModel.insert(fish);
-            Snackbar.make(findViewById(R.id.main_layout),getString(R.string.fish_added), Snackbar.LENGTH_LONG).show();
+            Snackbar.make(findViewById(R.id.main_layout), getString(R.string.fish_added), Snackbar.LENGTH_LONG).show();
 
-        }else if(requestCode == EDIT_FISH_ACTIVITY_REQUEST_CODE && resultCode == RESULT_OK){
+        } else if (requestCode == EDIT_FISH_ACTIVITY_REQUEST_CODE && resultCode == RESULT_OK) {
             selectedFish.setNazwa(data.getStringExtra(EditFishActivity.EXTRA_EDIT_FISH_NAZWA));
             selectedFish.setData(data.getStringExtra(EditFishActivity.EXTRA_EDIT_FISH_DATA));
             selectedFish.setWielkosc(data.getStringExtra(EditFishActivity.EXTRA_EDIT_FISH_WIELKOSC));
@@ -61,10 +62,8 @@ public class MainActivity extends AppCompatActivity {
 
             fishViewModel.update(selectedFish);
             Snackbar.make(findViewById(R.id.main_layout), getString(R.string.fish_updated), Snackbar.LENGTH_LONG).show();
-        }
-        else
-        {
-            Toast.makeText(getApplicationContext(),R.string.empty_not_save,Toast.LENGTH_LONG).show();
+        } else {
+            Toast.makeText(getApplicationContext(), R.string.empty_not_save, Toast.LENGTH_LONG).show();
 
         }
     }
@@ -74,6 +73,20 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        buttonCamera = findViewById(R.id.button_camera);
+
+        buttonCamera.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, CameraActivity.class);
+//                startActivityForResult(intent, NEW_CAMERA_ACTIVITY_REQUEST_CODE);
+                startActivity(intent);
+            }
+
+        });
+
 
         FloatingActionButton addButton = findViewById(R.id.add_button);
         addButton.setOnClickListener(new View.OnClickListener() {
@@ -123,8 +136,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     //14
-    private class FishHolder extends RecyclerView.ViewHolder implements View.OnClickListener, View.OnLongClickListener
-    {
+    private class FishHolder extends RecyclerView.ViewHolder implements View.OnClickListener, View.OnLongClickListener {
 
         private TextView fishNazwaTextView;
         private TextView fishDataTextView;
@@ -134,22 +146,21 @@ public class MainActivity extends AppCompatActivity {
         //r
         private Fish fish;
 
-        public FishHolder(LayoutInflater inflater, ViewGroup parent)
-        {
-            super(inflater.inflate(R.layout.fish_list_item,parent,false));
+        public FishHolder(LayoutInflater inflater, ViewGroup parent) {
+            super(inflater.inflate(R.layout.fish_list_item, parent, false));
 
 
-            fishNazwaTextView=itemView.findViewById(R.id.fish_nazwa);
-            fishDataTextView=itemView.findViewById(R.id.fish_data);
-            fishWielkoscTextView=itemView.findViewById(R.id.fish_wielkosc);
-            fishWagaTextView=itemView.findViewById(R.id.fish_waga);
-            fishJezioroTextView=itemView.findViewById(R.id.fish_jezioro);
+            fishNazwaTextView = itemView.findViewById(R.id.fish_nazwa);
+            fishDataTextView = itemView.findViewById(R.id.fish_data);
+            fishWielkoscTextView = itemView.findViewById(R.id.fish_wielkosc);
+            fishWagaTextView = itemView.findViewById(R.id.fish_waga);
+            fishJezioroTextView = itemView.findViewById(R.id.fish_jezioro);
             //r
             itemView.setOnClickListener(this);
             itemView.setOnLongClickListener(this);
         }
-        public void bind(Fish f)
-        {
+
+        public void bind(Fish f) {
 
             fishNazwaTextView.setText(f.getNazwa());
             fishDataTextView.setText(f.getData());
@@ -157,7 +168,7 @@ public class MainActivity extends AppCompatActivity {
             fishWagaTextView.setText(f.getWaga());
             fishJezioroTextView.setText(f.getJezioro());
 
-            fish=f;
+            fish = f;
         }
 
 
@@ -168,10 +179,10 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, EditFishActivity.class);
 
             intent.putExtra("FISH_NAZWA", fishNazwaTextView.getText().toString());
-            intent.putExtra("FISH_DATA",fishDataTextView.getText().toString());
-            intent.putExtra("FISH_WIELKOSC",fishWielkoscTextView.getText().toString());
-            intent.putExtra("FISH_WAGA",fishWagaTextView.getText().toString());
-            intent.putExtra("FISH_JEZIORO",fishJezioroTextView.getText().toString());
+            intent.putExtra("FISH_DATA", fishDataTextView.getText().toString());
+            intent.putExtra("FISH_WIELKOSC", fishWielkoscTextView.getText().toString());
+            intent.putExtra("FISH_WAGA", fishWagaTextView.getText().toString());
+            intent.putExtra("FISH_JEZIORO", fishJezioroTextView.getText().toString());
 
             startActivityForResult(intent, EDIT_FISH_ACTIVITY_REQUEST_CODE);
         }
@@ -184,44 +195,37 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private class FishAdapter extends RecyclerView.Adapter<FishHolder>
-    {
+    private class FishAdapter extends RecyclerView.Adapter<FishHolder> {
 
         private List<Fish> fishes;
 
         @NonNull
         @Override
         public FishHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-            return new FishHolder(getLayoutInflater(),parent);
+            return new FishHolder(getLayoutInflater(), parent);
         }
 
         @Override
         public void onBindViewHolder(@NonNull FishHolder holder, int position) {
 
-            if(fishes!=null)
-            {
+            if (fishes != null) {
                 Fish fish = fishes.get(position);
                 holder.bind(fish);
-            }
-            else
-            {
-                Log.d("MainActivity","No fishes");
+            } else {
+                Log.d("MainActivity", "No fishes");
             }
         }
 
         @Override
         public int getItemCount() {
-            if(fishes!=null)
-            {
+            if (fishes != null) {
                 return fishes.size();
-            }
-            else
+            } else
                 return 0;
         }
 
-        void setFishes(List<Fish> fishes)
-        {
-            this.fishes=fishes;
+        void setFishes(List<Fish> fishes) {
+            this.fishes = fishes;
             notifyDataSetChanged();
         }
     }

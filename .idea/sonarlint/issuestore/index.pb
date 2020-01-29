@@ -17,3 +17,7 @@ p
 @app/src/main/java/com/example/fishermanapp/EditFishActivity.java,4\f\4f383265420f41287d37da1ca8280886825a3507
 P
  app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
+n
+>app/src/main/java/com/example/fishermanapp/CameraActivity.java,e\4\e4850da9f184101a818915f5880e302bcc489dae
+l
+<app/src/main/java/com/example/fishermanapp/DisplayImage.java,e\f\ef495b3916faa117b63a60e61e042e30ce0e1cb4
