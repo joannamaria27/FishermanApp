@@ -34,25 +34,33 @@
         app:pressedTranslationZ="10dp" />
 
     <Button
+        android:id="@+id/btnFlash"
+        android:layout_width="55dp"
+        android:layout_height="20dp"
+        android:layout_centerInParent="true"
+        android:background="@android:color/holo_red_light"
+        android:text="ON" />
+
+    <Button
+        android:id="@+id/button"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WebView" />
+
+    <Button
         android:id="@+id/button_camera"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:backgroundTint="#FF9800"
         android:text="@string/fish_camera" />
 
-    <Button
-        android:id="@+id/button_light"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#FF0000"
-        android:text="@string/fish_light" />
-    <Button
-        android:background="@android:color/holo_red_light"
-        android:id="@+id/btnFlash"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="ON" />
+    <!--    <Button-->
+<!--        android:id="@+id/button_light"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:backgroundTint="#FF0000"-->
+<!--        android:text="latarka" />-->
 
 
 </LinearLayout>
