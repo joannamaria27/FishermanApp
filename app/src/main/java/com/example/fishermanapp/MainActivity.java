@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.hardware.camera2.CameraAccessException;
 import android.hardware.camera2.CameraManager;
+import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -31,7 +33,23 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
 import java.util.List;
-
+//class TestActivity extends AppCompatActivity {
+//    Button webView;
+//    @Override
+//    protected void onCreate(Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.activity_main);
+//        webView = (Button)findViewById(R.id.button);
+//
+//        webView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.technxt.net"));
+//                startActivity(intent);
+//            }
+//        });
+//    }
+//}
 public class MainActivity extends AppCompatActivity {
 
     Button btnFlashLight;
@@ -45,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
     private Fish selectedFish;
     Button buttonCamera;
 
+    FishAdapter fishAdapter;
 
     //22
     public static final int NEW_FISH_ACTIVITY_REQUEST_CODE = 1;
@@ -80,11 +99,22 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
+    Button webView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        webView = findViewById(R.id.button_web);
+
+
+        webView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.pzw.org.pl/home/"));
+                startActivity(intent);
+            }
+        });
+
 
         hasCameraFlash = getPackageManager().
                 hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH);
@@ -315,5 +345,26 @@ public class MainActivity extends AppCompatActivity {
             this.fishes = fishes;
             notifyDataSetChanged();
         }
+    }
+
+
+
+    private class SearchTaskAsynch extends AsyncTask<String,Void,List<Fish>> {
+
+        String SearchingText;
+
+        @Override
+        protected List<Fish> doInBackground(String ...Id){
+            SearchingText=Id[0];
+            List<Fish> fishes = fishViewModel.findFishes("%"+SearchingText+"%");
+            return fishes;
+        }
+
+        @Override
+        protected void onPostExecute(List<Fish> result){// ta funkcja odpala sie na zakończenie, result to wynik
+            fishAdapter.setFishes(result);
+            fishAdapter.notifyDataSetChanged();
+        }
+
     }
 }

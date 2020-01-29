@@ -1,9 +1,17 @@
 package com.example.fishermanapp;
+import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName="fish")
 public class Fish {
+
+//    @ColumnInfo(name = "content")
+//    private String content;
+//    @ColumnInfo(name = "author")
+//    private String author;
+//    @ColumnInfo(name = "book_title")
+//    private String bookTitle;
 
     @PrimaryKey(autoGenerate = true)
     private int id;
