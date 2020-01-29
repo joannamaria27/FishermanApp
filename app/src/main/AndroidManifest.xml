@@ -3,7 +3,7 @@
     package="com.example.fishermanapp">
 
     <uses-feature
-        android:name="android.hardware.Camera"
+        android:name="android.hardware.camera"
         android:required="true" />
 
     <uses-permission
@@ -35,7 +35,7 @@
 
             android:name="androidx.core.content.FileProvider"
 
-            android:authorities="${applicationId}.provider"
+            android:authorities="com.example.android.fileprovider"
 
             android:exported="false"
 
