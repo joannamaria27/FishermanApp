@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string name="hint_fish_nazwa">Name...</string>
+    <string name="button_save">SAVE</string>
+    <string name="empty_not_save">Fish not saved because there are empty fields.</string>
+    <string name="fish_added">Add fish</string>
+    <string name="fish_camera">PHOTO</string>
+    <string name="hint_fish_data">Date...</string>
+    <string name="fish_updated">Update fish</string>
+    <string name="app_name">FishermanApp</string>
+    <string name="action_settings">Settings</string>
+    <string name="hint_fish_jezioro">Lake...</string>
+    <string name="hint_fish_waga">Weight</string>
+    <string name="hint_fish_wielkosc">Size</string>
+    <string name="camera_take">Take photo</string>
+    <string name="camera_image">Show photo</string>
+
+</resources>

@@ -21,3 +21,13 @@ n
 >app/src/main/java/com/example/fishermanapp/CameraActivity.java,e\4\e4850da9f184101a818915f5880e302bcc489dae
 l
 <app/src/main/java/com/example/fishermanapp/DisplayImage.java,e\f\ef495b3916faa117b63a60e61e042e30ce0e1cb4
+b
+2app/src/main/res/layout/activity_display_image.xml,4\c\4c8d8882845b9e5e5a95f6efcebc207c359d6e20
+Y
+)app/src/main/res/layout/activity_main.xml,7\6\76b07e40f24cce093536731477540f12e7da3cb6
+S
+#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
+[
++app/src/main/res/layout/activity_camera.xml,4\b\4b92cbe465409761b8eb8c1cc7f4f5c8db8699df
+R
+"app/src/main/res/xml/file_path.xml,1\b\1bef3a7b11fd8a626206f807182a4527d1e5aa84
