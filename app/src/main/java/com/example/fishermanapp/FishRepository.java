@@ -45,6 +45,11 @@ public class FishRepository {
             fishDao.delete(fish);
         });
     }
+
+    List<Fish> findFish(String s){
+        return fishDao.findFishes(s);
+    }
+
     List<Fish> findFishWithNazwa(String nazwa)
     {
         return fishDao.findFishWithNazwa(nazwa);

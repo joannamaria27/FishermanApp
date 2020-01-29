@@ -8,6 +8,7 @@ import android.content.pm.PackageManager;
 import android.hardware.camera2.CameraAccessException;
 import android.hardware.camera2.CameraManager;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -62,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
     private Fish selectedFish;
     Button buttonCamera;
 
+    FishAdapter fishAdapter;
 
     //22
     public static final int NEW_FISH_ACTIVITY_REQUEST_CODE = 1;
@@ -102,6 +104,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        webView = findViewById(R.id.button_web);
 
 
         webView.setOnClickListener(new View.OnClickListener() {
@@ -342,5 +345,26 @@ public class MainActivity extends AppCompatActivity {
             this.fishes = fishes;
             notifyDataSetChanged();
         }
+    }
+
+
+
+    private class SearchTaskAsynch extends AsyncTask<String,Void,List<Fish>> {
+
+        String SearchingText;
+
+        @Override
+        protected List<Fish> doInBackground(String ...Id){
+            SearchingText=Id[0];
+            List<Fish> fishes = fishViewModel.findFishes("%"+SearchingText+"%");
+            return fishes;
+        }
+
+        @Override
+        protected void onPostExecute(List<Fish> result){// ta funkcja odpala sie na zakończenie, result to wynik
+            fishAdapter.setFishes(result);
+            fishAdapter.notifyDataSetChanged();
+        }
+
     }
 }

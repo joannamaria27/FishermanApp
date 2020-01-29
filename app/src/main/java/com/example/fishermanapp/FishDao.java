@@ -30,4 +30,10 @@ public interface FishDao {
 
     @Query("SELECT * FROM fish WHERE nazwa LIKE :nazwa")
     public List<Fish> findFishWithNazwa(String nazwa);
+
+    @Query("SELECT * FROM fish WHERE data LIKE :s OR nazwa LIKE :s OR jezioro LIKE :s")
+    List<Fish>  findFishes(String s);
+    @Query("SELECT * FROM fish")
+    List<Fish> findFishesAny();
+
 }
