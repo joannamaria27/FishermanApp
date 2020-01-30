@@ -29,10 +29,10 @@ public class CompasActivity extends Activity implements SensorEventListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_compas);
 
         //
-//        image = (ImageView) findViewById(R.id.main_iv);
+        image = (ImageView) findViewById(R.id.imageViewCompass);
 
         // TextView that will tell the user what degree is he heading
         tvHeading = (TextView) findViewById(R.id.tvHeading);
