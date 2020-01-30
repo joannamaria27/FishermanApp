@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8BC34A"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/button_baza"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="@dimen/big_padding"
+        android:backgroundTint="#009688"
+        android:text="BAZA POŁOWÓW"
+        android:textSize="24sp" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/big_padding"
+
+        app:srcCompat="@drawable/anchovy" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/button_camera"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+
+            android:layout_margin="@dimen/small_padding"
+            android:backgroundTint="#009688"
+            app:srcCompat="@drawable/camera" />
+
+        <ImageButton
+            android:id="@+id/button_light"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+
+            android:layout_margin="@dimen/small_padding"
+            android:backgroundTint="#009688"
+            app:srcCompat="@drawable/light" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buton_sun"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="@dimen/small_padding"
+        android:backgroundTint="#009688"
+        android:text="WSCHODY I ZACHODY SŁOŃCA"
+        android:textSize="24sp" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="match_parent"
+        android:layout_height="144dp"
+        app:srcCompat="@drawable/fish" />
+
+    <ImageButton
+        android:id="@+id/button_web"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="@dimen/small_padding"
+        android:adjustViewBounds="false"
+        android:backgroundTint="#009688"
+        android:tint="#F44336"
+        app:srcCompat="@mipmap/ic_sun1_foreground" />
+
+</LinearLayout>

@@ -1,3 +1,15 @@
 
-Esquid:S1604j"(Make this anonymous inner class a lambda(È¯ş=8™³Šÿ-
-nsquid:CommentedOutCodeLineT"<This block of commented-out lines of code should be removed.(ıÕá¸ûÿÿÿÿ8µ“¹‹ÿ-
+Nsquid:S00108°")Either remove or fill this block of code.(ÿ­çüÿÿÿÿ8ş¸˜›ÿ-
+osquid:S1301Ê"KReplace this "switch" statement by "if" statements to increase readability.(×ö³–úÿÿÿÿ8ş¸˜›ÿ-
+nsquid:CommentedOutCodeLine{"<This block of commented-out lines of code should be removed.(ıÕá¸ûÿÿÿÿ8µ“¹‹ÿ-
+isquid:HiddenFieldCheckŒ"?Rename "fishAdapter" which hides the field declared at line 50.(ªÖÊ8şË¦ÿ-
+|squid:S00116("^Rename this field "CAMERA_REQUEST_CODE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ë×Ò28ş¸˜›ÿ-
+qsquid:S00117Õ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ş Ê²8ãÖîœÿ-
+Xsquid:S3985Ğ"4Remove this unused private "SearchTaskAsynch" class.(å±Ö™ûÿÿÿÿ8ãÖîœÿ-
+]"squid:SwitchLastCaseIsDefaultCheckÊ""Add a default case to this switch.(×ö³–úÿÿÿÿ8ş¸˜›ÿ-
+|squid:S1488×"^Immediately return this expression instead of assigning it to the temporary variable "fishes".(’ù
+8ñÕøœÿ-
+Fsquid:S1604‘"(Make this anonymous inner class a lambda(È¯ş=8™³Šÿ-
+xsquid:S00116Ò"XRename this field "SearchingText" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶¼™ˆ8ãÖîœÿ-
+>squid:S1170("!Make this final field static too.(Ë×Ò28ş¸˜›ÿ-
+Nsquid:S00108¹")Either remove or fill this block of code.(ÿ­çüÿÿÿÿ8ş¸˜›ÿ-
