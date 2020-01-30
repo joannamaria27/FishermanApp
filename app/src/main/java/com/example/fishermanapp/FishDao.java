@@ -25,15 +25,15 @@ public interface FishDao {
     @Query("DELETE FROM fish")
     public void deleteAll();
 
-    @Query("SELECT * FROM fish ORDER BY nazwa")
+    @Query("SELECT * FROM fish")
     public LiveData<List<Fish>> findAll();
 
     @Query("SELECT * FROM fish WHERE nazwa LIKE :nazwa")
     public List<Fish> findFishWithNazwa(String nazwa);
 
     @Query("SELECT * FROM fish WHERE data LIKE :s OR nazwa LIKE :s OR jezioro LIKE :s")
-    List<Fish>  findFishes(String s);
+    List<Fish>  findFish(String s);
     @Query("SELECT * FROM fish")
-    List<Fish> findFishesAny();
+    List<Fish> findFishAny();
 
 }
