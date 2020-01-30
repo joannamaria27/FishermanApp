@@ -30,6 +30,7 @@ public class MActivity extends AppCompatActivity {
     Button button_sun;
 
     ImageButton buttonCamera;
+
     ImageButton buttonCompas;
 
     Button baza;
@@ -51,7 +52,7 @@ public class MActivity extends AppCompatActivity {
             }
         });
 
-        buttonCompas = findViewById(R.id.button_compass);
+        buttonCompas=findViewById(R.id.button_compass);
 
         buttonCompas.setOnClickListener(new View.OnClickListener() {
             @Override

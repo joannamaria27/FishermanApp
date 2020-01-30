@@ -37,7 +37,7 @@
             android:backgroundTint="#009688"
             app:srcCompat="@drawable/camera" />
 
-        <ImageView
+        <ImageButton
             android:id="@+id/button_compass"
             android:layout_width="140dp"
             android:layout_height="60dp"
