@@ -17,5 +17,11 @@
     <string name="camera_take">Take photo</string>
     <string name="camera_image">Show photo</string>
     <string name="fish_start">START</string>
+    <string name="p1">FISZ</string>
+    <string name="p2">DATE</string>
+    <string name="p3">SIZE</string>
+    <string name="p4">WEIGHT</string>
+    <string name="p5">LAKE</string>
+
 
 </resources>

@@ -6,6 +6,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -29,10 +30,12 @@ public class MActivity extends AppCompatActivity {
     Button button_sun;
 
     ImageButton buttonCamera;
+    ImageButton buttonCompas;
 
     Button baza;
     ImageButton webView;
 
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +47,16 @@ public class MActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MActivity.this, SunActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        buttonCompas = findViewById(R.id.button_compass);
+
+        buttonCompas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MActivity.this, CompasActivity.class);
                 startActivity(intent);
             }
         });

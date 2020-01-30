@@ -23,6 +23,13 @@
 
 
     <string name="fish_start">WEJDZ</string>
-    <string name="title_activity_menu_g">MenuGActivity</string>
+
+
+
+    <string name="p1">RYBA</string>
+    <string name="p2">DATA</string>
+    <string name="p3">WIELKOŚĆ</string>
+    <string name="p4">WAGA</string>
+    <string name="p5">JEZIORO</string>
 
 </resources>

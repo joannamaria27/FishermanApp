@@ -10,7 +10,7 @@ import org.shredzone.commons.suncalc.SunTimes;
 
 import java.util.Date;
 
-class SunActivity extends AppCompatActivity {
+public class SunActivity extends AppCompatActivity {
 
     Date today = new Date();
 
@@ -50,7 +50,7 @@ Date zachod = times.getSet();
         zd = findViewById(R.id.zachod_dzis);
         wj = findViewById(R.id.wschod_jutro);
         zj = findViewById(R.id.zachod_jutro);
-
+wschod.getTime();
         wd.setText(wschod.toString());
         zd.setText(zachod.toString());
         wj.setText(wschodJ.toString());
