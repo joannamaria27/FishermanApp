@@ -28,7 +28,7 @@ public class MActivity extends AppCompatActivity {
 
 
 
-    Button buttonCamera;
+    ImageButton buttonCamera;
 
     Button baza;
     Button webView;

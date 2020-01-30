@@ -20,11 +20,12 @@
             android:hint="Szukaj" />
 
     </com.google.android.material.textfield.TextInputLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:listitem="@layout/fish_list_item" >
+        android:layout_height="600dp"
+        tools:listitem="@layout/fish_list_item">
 
     </androidx.recyclerview.widget.RecyclerView>
 
@@ -43,28 +44,6 @@
         app:hoveredFocusedTranslationZ="10dp"
         app:maxImageSize="100dp"
         app:pressedTranslationZ="10dp" />
-
-    <Button
-        android:id="@+id/btnFlash"
-        android:layout_width="55dp"
-        android:layout_height="20dp"
-        android:layout_centerInParent="true"
-        android:background="@android:color/holo_red_light"
-        android:text="ON" />
-
-    <Button
-        android:id="@+id/button_web"
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="WebView" />
-
-    <Button
-        android:id="@+id/button_camera"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:backgroundTint="#FF9800"
-        android:text="@string/fish_camera" />
 
     <!--    <Button-->
 <!--        android:id="@+id/button_light"-->
