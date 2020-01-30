@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#4B4CAF50"
+    android:background="#009688"
     android:orientation="vertical"
     tools:context=".CameraActivity">
 
@@ -13,7 +13,8 @@
         android:layout_height="200dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="55dp"
-        android:backgroundTint="#FFC107"
+        android:backgroundTint="#00BCD4"
+        android:background="@drawable/button_bg_round"
         android:drawableTint="#00BCD4"
         android:onClick="captureImage"
         android:text="@string/camera_take" />
@@ -23,7 +24,8 @@
         android:layout_height="200dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="55dp"
-        android:backgroundTint="#E91E63"
+        android:background="@drawable/button_bg_round"
+        android:backgroundTint="#2196F3"
         android:onClick="displayImage"
         android:text="@string/camera_image" />
 

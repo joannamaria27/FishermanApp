@@ -47,7 +47,7 @@ public class FishRepository {
     }
 
     List<Fish> findFish(String s){
-        return fishDao.findFishes(s);
+        return fishDao.findFish(s);
     }
 
     List<Fish> findFishWithNazwa(String nazwa)

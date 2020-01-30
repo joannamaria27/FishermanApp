@@ -13,7 +13,6 @@
     <string name="fish_updated">Zaaktualizowanie ryby.</string>
 
 
-
     <string name="fish_camera">ZDJECIE</string>
 
     <string name="camera_take">ZRÓB ZDJECIE</string>
@@ -21,5 +20,16 @@
     <string name="fish_added">Dodaj rybę</string>
     <string name="app_name">WędkarzApp</string>
     <string name="action_settings">Ustawienia</string>
+
+
+    <string name="fish_start">WEJDZ</string>
+
+
+
+    <string name="p1">RYBA</string>
+    <string name="p2">DATA</string>
+    <string name="p3">WIELKOŚĆ</string>
+    <string name="p4">WAGA</string>
+    <string name="p5">JEZIORO</string>
 
 </resources>

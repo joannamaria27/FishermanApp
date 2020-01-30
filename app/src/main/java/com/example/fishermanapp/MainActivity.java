@@ -33,41 +33,21 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
 import java.util.List;
-//class TestActivity extends AppCompatActivity {
-//    Button webView;
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_main);
-//        webView = (Button)findViewById(R.id.button);
-//
-//        webView.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.technxt.net"));
-//                startActivity(intent);
-//            }
-//        });
-//    }
-//}
+
 public class MainActivity extends AppCompatActivity {
 
-    Button btnFlashLight;
-    private final int CAMERA_REQUEST_CODE=2;
-    boolean hasCameraFlash = false;
-    private boolean isFlashOn=false;
+
 
     //15
     private FishViewModel fishViewModel;
     //r
     private Fish selectedFish;
-    Button buttonCamera;
 
     FishAdapter fishAdapter;
 
     //22
     public static final int NEW_FISH_ACTIVITY_REQUEST_CODE = 1;
-    public static final int NEW_CAMERA_ACTIVITY_REQUEST_CODE = 1;
+
     //r
     public static final int EDIT_FISH_ACTIVITY_REQUEST_CODE = 2;
 
@@ -99,48 +79,15 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    Button webView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        webView = findViewById(R.id.button_web);
 
 
-        webView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.pzw.org.pl/home/"));
-                startActivity(intent);
-            }
-        });
 
 
-        hasCameraFlash = getPackageManager().
-                hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH);
-
-        btnFlashLight = findViewById(R.id.btnFlash);
-
-        btnFlashLight.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                askPermission(Manifest.permission.CAMERA,CAMERA_REQUEST_CODE);
-
-            }
-        });
-
-        buttonCamera = findViewById(R.id.button_camera);
-
-        buttonCamera.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, CameraActivity.class);
-//                startActivityForResult(intent, NEW_CAMERA_ACTIVITY_REQUEST_CODE);
-                startActivity(intent);
-            }
-
-        });
 
 
         FloatingActionButton addButton = findViewById(R.id.add_button);
@@ -166,69 +113,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void flashLight() {
-        if (hasCameraFlash) {
-            if (isFlashOn) {
-                btnFlashLight.setText("ON");
-                flashLightOff();
-                isFlashOn=false;
-            } else {
-                btnFlashLight.setText("OFF");
-                flashLightOn();
-                isFlashOn=true;
-            }
-        } else {
-            Toast.makeText(MainActivity.this, "No flash available on your device",
-                    Toast.LENGTH_SHORT).show();
-        }
-    }
 
-    private void flashLightOn() {
-        CameraManager cameraManager = (CameraManager) getSystemService(Context.CAMERA_SERVICE);
-
-        try {
-            String cameraId = cameraManager.getCameraIdList()[0];
-            cameraManager.setTorchMode(cameraId, true);
-        } catch (CameraAccessException e) {
-        }
-    }
-
-    private void flashLightOff() {
-        CameraManager cameraManager = (CameraManager) getSystemService(Context.CAMERA_SERVICE);
-        try {
-            String cameraId = cameraManager.getCameraIdList()[0];
-            cameraManager.setTorchMode(cameraId, false);
-        } catch (CameraAccessException e) {
-        }
-    }
-
-    private void askPermission(String permission,int requestCode) {
-        if (ContextCompat.checkSelfPermission(this,permission)!= PackageManager.PERMISSION_GRANTED){
-            // We Dont have permission
-            ActivityCompat.requestPermissions(this,new String[]{permission},requestCode);
-
-        }else {
-            // We already have permission do what you want
-            flashLight();
-        }
-
-    }
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        switch (requestCode) {
-            case CAMERA_REQUEST_CODE:
-                if (grantResults.length>0 && grantResults[0]==PackageManager.PERMISSION_GRANTED){
-                    hasCameraFlash = getPackageManager().
-                            hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH);
-                    Toast.makeText(this,"Camera Permission Granted",Toast.LENGTH_LONG).show();
-                    flashLight();
-
-                }else{
-                    Toast.makeText(this,"Camera Permission Denied",Toast.LENGTH_LONG).show();
-                }
-                break;
-        }
-    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -356,7 +241,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected List<Fish> doInBackground(String ...Id){
             SearchingText=Id[0];
-            List<Fish> fishes = fishViewModel.findFishes("%"+SearchingText+"%");
+            List<Fish> fishes = fishViewModel.findFish("%"+SearchingText+"%");
             return fishes;
         }
 

@@ -40,7 +40,7 @@ public class FishViewModel extends AndroidViewModel {
         fishRepository.findFishWithNazwa(title);
     }
 
-    public List<Fish> findFishes(String s){
+    public List<Fish> findFish(String s){
         return fishRepository.findFish(s);
     }
 

@@ -49,14 +49,32 @@ public abstract class FishDatabase extends RoomDatabase {
                 FishDao dao = INSTANCE.fishDao();
                 dao.deleteAll();
 
-                Fish fish = new Fish ("Okoń", "20-20-2019", "20.3","0.5","Nidzkie");
+                Fish fish = new Fish ("Okoń", "20-20-2019", "22.3","0.5","Nidzkie");
                 dao.insert(fish);
-                Fish fish2 = new Fish ("Szczupak", "20-20-2019", "10","0.45","Nidzkie");
+                Fish fish2 = new Fish ("Szczupak", "20-21-2019", "10","0.45","Roś");
                 dao.insert(fish2);
-                Fish fish3 = new Fish ("Płoć", "20-20-2019", "15.8","1.5","Nidzkie");
+                Fish fish3 = new Fish ("Płoć", "20-22-2019", "15.8","1.5","Nidzkie");
                 dao.insert(fish3);
-                Fish fish4 = new Fish ("Okoń", "20-21-2019", "22","2.2","Nidzkie");
+                Fish fish4 = new Fish ("Okoń", "20-22-2019", "12.2","2.2","Nidzkie");
                 dao.insert(fish4);
+                Fish fish5 = new Fish ("Okoń", "20-20-2019", "20.3","0.5","Nidzkie");
+                dao.insert(fish5);
+                Fish fish6 = new Fish ("Szczupak", "20-22-2019", "10","0.45","Roś");
+                dao.insert(fish6);
+                Fish fish7 = new Fish ("Szczupak", "20-20-2019", "14.8","1.5","Nidzkie");
+                dao.insert(fish7);
+                Fish fish8 = new Fish ("Okoń", "20-21-2019", "22","2.2","Roś");
+                dao.insert(fish8);
+                Fish fish9 = new Fish ("Okoń", "20-22-2019", "12.2","0.2","Nidzkie");
+                dao.insert(fish9);
+                Fish fish10 = new Fish ("Okoń", "20-20-2019", "20.3","0.5","Nidzkie");
+                dao.insert(fish10);
+                Fish fish11 = new Fish ("Płoć", "20-24-2019", "10","0.45","Roś");
+                dao.insert(fish11);
+                Fish fish12 = new Fish ("Płoć", "20-20-2019", "14.8","0.5","Nidzkie");
+                dao.insert(fish12);
+                Fish fish13 = new Fish ("Okoń", "20-24-2019", "20","1.2","Roś");
+                dao.insert(fish13);
             });
         }
     };
