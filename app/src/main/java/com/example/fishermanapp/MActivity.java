@@ -22,22 +22,32 @@ public class MActivity extends AppCompatActivity {
 
     public static final int NEW_CAMERA_ACTIVITY_REQUEST_CODE = 1;
     ImageButton btnFlashLight;
-    private final int CAMERA_REQUEST_CODE=2;
+    private final int CAMERA_REQUEST_CODE = 2;
     boolean hasCameraFlash = false;
-    private boolean isFlashOn=false;
+    private boolean isFlashOn = false;
 
-
+    Button button_sun;
 
     ImageButton buttonCamera;
 
     Button baza;
     ImageButton webView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_m);
 
-                buttonCamera = findViewById(R.id.button_camera);
+        button_sun = findViewById(R.id.buton_sun);
+
+        button_sun.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MActivity.this, SunActivity.class);
+                startActivity(intent);
+            }
+        });
+        buttonCamera = findViewById(R.id.button_camera);
 
         buttonCamera.setOnClickListener(new View.OnClickListener() {
 
@@ -89,7 +99,7 @@ public class MActivity extends AppCompatActivity {
         btnFlashLight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                askPermission(Manifest.permission.CAMERA,CAMERA_REQUEST_CODE);
+                askPermission(Manifest.permission.CAMERA, CAMERA_REQUEST_CODE);
 
             }
         });
@@ -101,11 +111,11 @@ public class MActivity extends AppCompatActivity {
             if (isFlashOn) {
 //                btnFlashLight.setText("ON");
                 flashLightOff();
-                isFlashOn=false;
+                isFlashOn = false;
             } else {
 //                btnFlashLight.setText("OFF");
                 flashLightOn();
-                isFlashOn=true;
+                isFlashOn = true;
             }
         } else {
             Toast.makeText(MActivity.this, "No flash available on your device",
@@ -132,29 +142,30 @@ public class MActivity extends AppCompatActivity {
         }
     }
 
-    private void askPermission(String permission,int requestCode) {
-        if (ContextCompat.checkSelfPermission(this,permission)!= PackageManager.PERMISSION_GRANTED){
+    private void askPermission(String permission, int requestCode) {
+        if (ContextCompat.checkSelfPermission(this, permission) != PackageManager.PERMISSION_GRANTED) {
             // We Dont have permission
-            ActivityCompat.requestPermissions(this,new String[]{permission},requestCode);
+            ActivityCompat.requestPermissions(this, new String[]{permission}, requestCode);
 
-        }else {
+        } else {
             // We already have permission do what you want
             flashLight();
         }
 
     }
+
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         switch (requestCode) {
             case CAMERA_REQUEST_CODE:
-                if (grantResults.length>0 && grantResults[0]==PackageManager.PERMISSION_GRANTED){
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     hasCameraFlash = getPackageManager().
                             hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH);
-                    Toast.makeText(this,"Camera Permission Granted",Toast.LENGTH_LONG).show();
+                    Toast.makeText(this, "Camera Permission Granted", Toast.LENGTH_LONG).show();
                     flashLight();
 
-                }else{
-                    Toast.makeText(this,"Camera Permission Denied",Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(this, "Camera Permission Denied", Toast.LENGTH_LONG).show();
                 }
                 break;
         }
