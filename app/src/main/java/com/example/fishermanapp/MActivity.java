@@ -31,7 +31,7 @@ public class MActivity extends AppCompatActivity {
     ImageButton buttonCamera;
 
     Button baza;
-    Button webView;
+    ImageButton webView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
