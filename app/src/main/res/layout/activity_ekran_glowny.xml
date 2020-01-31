@@ -18,7 +18,7 @@
         android:id="@+id/button_wejdz"
         android:layout_width="match_parent"
         android:layout_height="79dp"
-        android:backgroundTint="#8BC34A"
+        android:backgroundTint="#FFC107"
         android:text="@string/fish_start"
         android:textSize="24sp" />
 

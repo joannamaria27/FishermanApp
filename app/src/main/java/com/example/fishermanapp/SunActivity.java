@@ -8,22 +8,23 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import org.shredzone.commons.suncalc.SunTimes;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class SunActivity extends AppCompatActivity {
 
-    Date today = new Date();
 
     double lat = 52.13;//geolocation
     double lng = 21.00;
 
-SunTimes times = SunTimes.compute()
-        .on(today)
-        .at(lat, lng)
-        .execute();
+    Date today = new Date();
+    SunTimes times = SunTimes.compute()
+            .on(today)
+            .at(lat, lng)
+            .execute();
 
-Date wschod = times.getRise();
-Date zachod = times.getSet();
+    Date wschod = times.getRise();
+    Date zachod = times.getSet();
 
 
     Date tomorrow = new Date(today.getTime() + (1000 * 60 * 60 * 24));
@@ -31,9 +32,8 @@ Date zachod = times.getSet();
             .on(tomorrow)
             .at(lat, lng)
             .execute();
-    Date wschodJ = times.getRise();
-    Date zachodJ = times.getSet();
-
+    Date wschodJ = timesJ.getRise();
+    Date zachodJ = timesJ.getSet();
 
 
     private TextView wd;
@@ -50,11 +50,15 @@ Date zachod = times.getSet();
         zd = findViewById(R.id.zachod_dzis);
         wj = findViewById(R.id.wschod_jutro);
         zj = findViewById(R.id.zachod_jutro);
-wschod.getTime();
-        wd.setText(wschod.toString());
-        zd.setText(zachod.toString());
-        wj.setText(wschodJ.toString());
-        zj.setText(zachodJ.toString());
+
+
+        SimpleDateFormat formatter = new SimpleDateFormat("HH:mm:ss");
+        System.out.println(formatter.format(wschod));
+
+        wd.setText(formatter.format(wschod));
+        zd.setText(formatter.format(zachod));
+        wj.setText(formatter.format(wschodJ));
+        zj.setText(formatter.format(zachodJ));
 
     }
 

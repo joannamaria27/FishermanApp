@@ -32,4 +32,16 @@
     <string name="p4">WAGA</string>
     <string name="p5">JEZIORO</string>
 
+
+
+    <string name="wsiza">WSCHODY I ZACHODY SŁOŃCA</string>
+    <string name="baza">BAZA POŁOWÓW</string>
+
+
+    <string name="wsd">Wschód słońca dziś: </string>
+    <string name="zsd">Zachód słońca dziś: </string>
+
+    <string name="wsj">Wschód słońca jutro: </string>
+    <string name="zsj">Zachód słońca jutro: </string>
+
 </resources>

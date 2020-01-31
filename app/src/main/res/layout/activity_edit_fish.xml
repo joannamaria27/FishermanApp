@@ -1,71 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--20-->
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#009688"
+    android:orientation="vertical">
 
     <EditText
         android:id="@+id/edit_fish_nazwa"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/big_padding"
+        android:layout_marginBottom="@dimen/big_padding"
         android:fontFamily="sans-serif-light"
         android:hint="@string/hint_fish_nazwa"
         android:inputType="textAutoComplete"
         android:padding="@dimen/small_padding"
-        android:layout_marginBottom="@dimen/big_padding"
-        android:layout_marginTop="@dimen/big_padding"
         android:textSize="18sp" />
 
     <EditText
         android:id="@+id/edit_fish_data"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/big_padding"
+        android:layout_marginBottom="@dimen/big_padding"
         android:fontFamily="sans-serif-light"
         android:hint="@string/hint_fish_data"
         android:inputType="textAutoComplete"
         android:padding="@dimen/small_padding"
-        android:layout_marginBottom="@dimen/big_padding"
-        android:layout_marginTop="@dimen/big_padding"
         android:textSize="18sp" />
 
     <EditText
         android:id="@+id/edit_fish_wielkosc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/big_padding"
+        android:layout_marginBottom="@dimen/big_padding"
         android:fontFamily="sans-serif-light"
         android:hint="@string/hint_fish_wielkosc"
         android:inputType="textAutoComplete"
         android:padding="@dimen/small_padding"
-        android:layout_marginBottom="@dimen/big_padding"
-        android:layout_marginTop="@dimen/big_padding"
         android:textSize="18sp" />
 
     <EditText
         android:id="@+id/edit_fish_waga"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/big_padding"
+        android:layout_marginBottom="@dimen/big_padding"
         android:fontFamily="sans-serif-light"
         android:hint="@string/hint_fish_waga"
         android:inputType="textAutoComplete"
         android:padding="@dimen/small_padding"
-        android:layout_marginBottom="@dimen/big_padding"
-        android:layout_marginTop="@dimen/big_padding"
         android:textSize="18sp" />
 
     <EditText
         android:id="@+id/edit_fish_jezioro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/big_padding"
+        android:layout_marginBottom="@dimen/big_padding"
         android:fontFamily="sans-serif-light"
         android:hint="@string/hint_fish_jezioro"
         android:inputType="textAutoComplete"
         android:padding="@dimen/small_padding"
-        android:layout_marginBottom="@dimen/big_padding"
-        android:layout_marginTop="@dimen/big_padding"
         android:textSize="18sp" />
 
     <Button
