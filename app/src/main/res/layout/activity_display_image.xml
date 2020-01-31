@@ -8,9 +8,10 @@
     tools:context=".DisplayImage">
 
     <ImageView
+        android:id="@+id/mimageView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="4dp"
-        android:id="@+id/mimageView"/>
+        android:background="#009688"
+        android:padding="4dp" />
 
 </RelativeLayout>
