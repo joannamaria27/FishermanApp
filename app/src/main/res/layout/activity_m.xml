@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_margin="@dimen/big_padding"
-        android:backgroundTint="#FFC107"
+        android:backgroundTint="#4CAF50"
         android:text="@string/baza"
         android:textSize="24sp" />
 
@@ -61,7 +61,7 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_margin="@dimen/small_padding"
-        android:backgroundTint="#FFC107"
+        android:backgroundTint="#4CAF50"
         android:text="@string/wsiza"
         android:textSize="24sp" />
 
@@ -77,8 +77,8 @@
         android:layout_height="60dp"
         android:layout_margin="@dimen/small_padding"
         android:adjustViewBounds="false"
-        android:backgroundTint="#FFC107"
-        android:tint="#F44336"
+        android:backgroundTint="#4CAF50"
+        android:tint="#3F51B5"
         app:srcCompat="@mipmap/ic_sun1_foreground" />
 
 </LinearLayout>

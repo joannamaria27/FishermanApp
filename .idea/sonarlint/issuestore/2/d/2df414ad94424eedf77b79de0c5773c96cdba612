@@ -1,5 +1,7 @@
 
+isquid:S11928"KDefine a constant instead of duplicating this literal "20-22-2019" 4 times.(˜À¼š8»ý’Åÿ-
+gsquid:S11926"IDefine a constant instead of duplicating this literal "Szczupak" 3 times.(ðÜ· 8¸Ì‘Åÿ-
 qsquid:S3008"SRename this field "INSTANCE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÃÐïŽ8óÑéµþ-
-isquid:S11924"KDefine a constant instead of duplicating this literal "20-20-2019" 3 times.(ü¶öÐ8ñ¾ôµþ-
 Lsquid:S3077".Remove the "volatile" keyword from this field.(ÃÐïŽ8óÑéµþ-
-fsquid:S11924"HDefine a constant instead of duplicating this literal "Nidzkie" 4 times.(ü¶öÐ8ñ¾ôµþ-
+ksquid:S11924"HDefine a constant instead of duplicating this literal "Nidzkie" 8 times.(¶©†œüÿÿÿÿ8ñ¾ôµþ-
+nsquid:S11924"KDefine a constant instead of duplicating this literal "20-20-2019" 5 times.(¶©†œüÿÿÿÿ8ñ¾ôµþ-

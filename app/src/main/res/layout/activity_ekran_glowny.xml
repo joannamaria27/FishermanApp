@@ -12,13 +12,14 @@
         android:id="@+id/imageView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/big_padding"
         app:srcCompat="@drawable/fisherman" />
 
     <Button
         android:id="@+id/button_wejdz"
         android:layout_width="match_parent"
         android:layout_height="79dp"
-        android:backgroundTint="#FFC107"
+        android:backgroundTint="#4CAF50"
         android:text="@string/fish_start"
         android:textSize="24sp" />
 

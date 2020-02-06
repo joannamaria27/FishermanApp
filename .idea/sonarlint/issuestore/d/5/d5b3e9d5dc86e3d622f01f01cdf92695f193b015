@@ -1,15 +1,17 @@
 
-Nsquid:S00108°")Either remove or fill this block of code.(ÿ­çüÿÿÿÿ8ş¸˜›ÿ-
-osquid:S1301Ê"KReplace this "switch" statement by "if" statements to increase readability.(×ö³–úÿÿÿÿ8ş¸˜›ÿ-
-nsquid:CommentedOutCodeLine{"<This block of commented-out lines of code should be removed.(ıÕá¸ûÿÿÿÿ8µ“¹‹ÿ-
-isquid:HiddenFieldCheckŒ"?Rename "fishAdapter" which hides the field declared at line 50.(ªÖÊ8şË¦ÿ-
-|squid:S00116("^Rename this field "CAMERA_REQUEST_CODE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ë×Ò28ş¸˜›ÿ-
-qsquid:S00117Õ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ş Ê²8ãÖîœÿ-
-Xsquid:S3985Ğ"4Remove this unused private "SearchTaskAsynch" class.(å±Ö™ûÿÿÿÿ8ãÖîœÿ-
-]"squid:SwitchLastCaseIsDefaultCheckÊ""Add a default case to this switch.(×ö³–úÿÿÿÿ8ş¸˜›ÿ-
-|squid:S1488×"^Immediately return this expression instead of assigning it to the temporary variable "fishes".(’ù
+nsquid:UselessImportCheck	"CRemove this unused import 'android.hardware.camera2.CameraManager'.(äÖ8ú›ÙÀÿ-
+psquid:UselessImportCheck"@Remove this unused import 'androidx.core.content.ContextCompat'.(üäÂùÿÿÿÿ8ú›ÙÀÿ-
+xsquid:S00116ï"XRename this field "SearchingText" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶¼™ˆ8ãÖîœÿ-
+nsquid:UselessImportCheck">Remove this unused import 'android.content.pm.PackageManager'.(€®¥õÿÿÿÿÿ8‰»İÀÿ-
+qsquid:S00117ò"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ş Ê²8ãÖîœÿ-
+\squid:UselessImportCheck
+",Remove this unused import 'android.net.Uri'.(òêû‘ıÿÿÿÿ8“‡Áÿ-
+{squid:UselessImportCheck"KRemove this unused import 'android.hardware.camera2.CameraAccessException'.(Ô½¨µıÿÿÿÿ8ú›ÙÀÿ-
+bsquid:UselessImportCheck"2Remove this unused import 'android.widget.Button'.(²òıÿÿÿÿ8ôÄÁÿ-
+hsquid:UselessImportCheck"=Remove this unused import 'androidx.core.app.ActivityCompat'.(ş¤—²8ú›ÙÀÿ-
+Esquid:S1604l"(Make this anonymous inner class a lambda(È¯ş=8™³Šÿ-
+Xsquid:S3985í"4Remove this unused private "SearchTaskAsynch" class.(å±Ö™ûÿÿÿÿ8ãÖîœÿ-
+_squid:UselessImportCheck"4Remove this unused import 'android.content.Context'.(©Ê‰è8ú›ÙÀÿ-
+|squid:S1488ô"^Immediately return this expression instead of assigning it to the temporary variable "fishes".(’ù
 8ñÕøœÿ-
-Fsquid:S1604‘"(Make this anonymous inner class a lambda(È¯ş=8™³Šÿ-
-xsquid:S00116Ò"XRename this field "SearchingText" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶¼™ˆ8ãÖîœÿ-
->squid:S1170("!Make this final field static too.(Ë×Ò28ş¸˜›ÿ-
-Nsquid:S00108¹")Either remove or fill this block of code.(ÿ­çüÿÿÿÿ8ş¸˜›ÿ-
+hsquid:HiddenFieldCheckg"?Rename "fishAdapter" which hides the field declared at line 46.(ªÖÊ8şË¦ÿ-

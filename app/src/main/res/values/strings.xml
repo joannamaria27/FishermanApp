@@ -4,7 +4,7 @@
 
     <string name="hint_fish_nazwa">Nazwa...</string>
     <string name="hint_fish_data">Data...</string>
-    <string name="hint_fish_wielkosc">Wielkosc...</string>
+    <string name="hint_fish_wielkosc">Wielkość...</string>
     <string name="hint_fish_waga">Waga...</string>
     <string name="hint_fish_jezioro">Jezioro...</string>
     <string name="button_save">ZAPISZ</string>

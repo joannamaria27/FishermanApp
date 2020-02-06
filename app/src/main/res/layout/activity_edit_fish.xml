@@ -72,7 +72,7 @@
         android:id="@+id/button_save"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@color/buttomColor"
+        android:background="#4CAF50"
         android:text="@string/button_save" />
 
     <ImageView

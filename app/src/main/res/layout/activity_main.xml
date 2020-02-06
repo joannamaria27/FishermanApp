@@ -71,9 +71,9 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="5dp"
         android:layout_marginBottom="5dp"
-        android:backgroundTint="#FFC107"
+        android:backgroundTint="#009688"
         android:src="@drawable/ic_add"
-        app:backgroundTint="@color/buttomColor"
+        app:backgroundTint="#4CAF50"
         app:hoveredFocusedTranslationZ="10dp"
         app:maxImageSize="100dp"
         app:pressedTranslationZ="10dp" />
