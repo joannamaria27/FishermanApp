@@ -1,5 +1,5 @@
 # FishermanApp
-Android app for Fisherman
+Android app for fishermen
 
 The application includes
 * catch database
